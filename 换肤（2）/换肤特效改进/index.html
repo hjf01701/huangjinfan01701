@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>换肤改进</title>
+<style type="text/css">
+*{margin:0;padding:0}
+  a{color:#fff;
+    margin-top:10px;
+	display:block;
+	margin-left:18%;
+	font-size:13px;
+	position:absolute;
+    }
+	.con{width:911px;
+	     height:317px;
+		 margin:50px auto;}
+    .head123{width:100%;
+	      height:0px;
+		  background:#fff;
+		  position:fixed;
+		  left:0px;
+		  top:0px;
+		  border-bottom:1px solid #e3e3e3;
+		  overflow:hidden;
+		  transition:0.5s;
+		  }
+	.title123{width:911px;
+	       height:45px;
+		   margin:0px auto;}	  
+	.heitiao{width:100%;
+	         height:35px;
+			 background:rgba(0,0,0,0.7);
+			 }
+	.menu123{width:100%;
+	      height:45px;
+		  border-bottom:1px solid #e3e3e3;}
+	.p1{width:861px;
+	    height:45px;
+		background:url(images/p1.png);
+		float:left;
+		cursor:pointer;}
+    .p2{width:50px;
+	    height:45px;
+		background:url(images/sp.png);
+		float:right;
+		cursor:pointer;
+		}
+    .bg{width:911px;
+	    height:205px;
+		margin:25px auto;}
+	.bgcon{width:590px;
+	       height:190px;
+		   float:left;
+		   }
+    .bgcon img{width:97px;
+	           height:59px;
+		       display:block;
+			   float:left;
+			   margin-right:1px;
+			   margin-bottom:1px;
+			   }
+	.bgcon .big{width:195px;
+	            height:119px;}
+	.bgcon .last{position:relative;
+	             top:-60px;
+				 }
+	.bgyl{width:264px;
+	      height:180px;
+		  float:right;
+		  background:url(images/bg1s.jpg);
+		  background-size:294px;}
+		  body{background-repeat:no-repeat;}
+		  .bgy1{
+			  background-size:264px 180px;
+			  background-repeat: no-repeat;
+		  }
+</style>
+</head>
+
+<body>
+<a href="#" class="btn b1">换肤</a>
+
+<div class="heitiao"></div>
+<div class="con">
+  希望长大在线办的越来越好，不忘初心，方得始终
+</div>
+<div class="head123">
+   <div class="menu123">
+      <div class="title123">
+          <p class="p1"></p>
+          <p class="p2" class="btn b2"></p>
+      </div>
+ <div class="bg">
+    <div class="bgcon">
+        <img class="big" src="images/bg0s.jpg" s="images/bg0.jpg">
+        <img src="images/bg1s.jpg" s="images/bg1.jpg">
+        <img src="images/bg2s.jpg" s="images/bg2.jpg">
+        <img src="images/bg3s.jpg" s="images/bg3.jpg">
+        <img src="images/bg4s.jpg" s="images/bg4.jpg"> 
+        <img src="images/bg5s.jpg" s="images/bg5.jpg">
+        <img class="big" src="images/bg6s.jpg" s="images/bg6.jpg">
+        <img src="images/bg7s.jpg" s="images/bg7.jpg">
+        <img src="images/bg8s.jpg" s="images/bg8.jpg">
+        <img class="last" src="images/bg9s.jpg" s="images/bg9.jpg">
+        <img class="last" src="images/bg10s.jpg" s="images/bg10.jpg">
+        <img class="last" src="images/bg11s.jpg" s="images/bg11.jpg">
+    </div>
+       <div class="bgyl">
+           <img src="images/yl.png">
+       </div>
+   </div>
+   </div>
+   </div>
+   <script type="text/javascript">
+   var  key=true,
+        head1=document.getElementsByClassName("head123")[0],
+	    aa=document.getElementsByTagName("a")[0],
+		p2=document.getElementsByClassName("p2")[0],
+		bgcon=document.getElementsByClassName("bgcon")[0],
+		bodye=document.body,
+		bgy=document.getElementsByClassName("bgyl")[0].getElementsByTagName("img")[0];
+     aa.onclick=function (){
+		head1.style.height="288px";
+		key=true;
+	 }
+	 p2.onclick=function(){
+		head1.style.height="0px";
+	 }
+     bgcon.onmousemove=function(e){
+		 if(key){
+           e.target.tagName=="IMG"&&(bodye.style.backgroundImage="url("+e.target.getAttribute("s")+")",bgy.style.backgroundImage="url("+e.target.src+")");
+		 }
+	 }
+	 bgcon.onclick=function(e){
+	  if(e.target.tagName=="IMG"){
+		  bodye.style.backgroundImage="url("+e.target.getAttribute("s")+")";
+		  key=false;
+	  }
+	 }
+   </script>
+
+</body>
+</html>
